@@ -10,6 +10,7 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 import json
 
+URL = ""
 
 OPTIONS = Options()
 OPTIONS.add_argument(
@@ -18,7 +19,7 @@ OPTIONS.page_load_strategy = 'normal'
 
 DRIVER = webdriver.Chrome(service=Service(
     ChromeDriverManager().install()), options=OPTIONS)
-DRIVER.get("http://ivylearn.ivytech.edu/")
+DRIVER.get(URL)
 
 
 def get_course_links():
